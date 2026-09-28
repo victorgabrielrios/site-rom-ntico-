@@ -1,0 +1,252 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff0f5;
+    color: #4a2630;
+    overflow-x: hidden;
+}
+
+/* TELA INICIAL */
+
+#inicio {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(135deg, #6d1235, #e91e63, #ff6f9c);
+}
+
+.conteudo-inicial {
+    width: 90%;
+    max-width: 430px;
+    padding: 45px 25px;
+
+    background: rgba(255,255,255,0.95);
+    border-radius: 35px;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+
+    position: relative;
+    z-index: 2;
+}
+
+.conteudo-inicial h1 {
+    color: #b51650;
+    font-size: 38px;
+    margin: 15px 0;
+}
+
+.conteudo-inicial p {
+    color: #70404d;
+    font-size: 17px;
+}
+
+/* CORAÇÃO */
+
+.coracao-pulsante {
+    font-size: 75px;
+    color: #e91e63;
+
+    animation: pulsar 1.4s infinite;
+
+    text-shadow: 0 0 20px rgba(233,30,99,0.5);
+}
+
+@keyframes pulsar {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* CORAÇÕES */
+
+.coracoes {
+    position: absolute;
+    inset: 0;
+    color: rgba(255,255,255,0.35);
+    font-size: 35px;
+}
+
+.coracoes::before {
+    content: "♥  ♥  ♥  ♥  ♥";
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    animation: flutuar 8s linear infinite;
+}
+
+.coracoes::after {
+    content: "♥  ♥  ♥  ♥";
+    position: absolute;
+    top: 120%;
+    width: 100%;
+    animation: flutuar 8s linear infinite;
+    animation-delay: 3s;
+}
+
+@keyframes flutuar {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-130vh);
+    }
+}
+
+/* BOTÕES */
+
+button {
+    border: none;
+    color: white;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    padding: 15px 35px;
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    background: linear-gradient(135deg, #b51650, #e91e63);
+
+    box-shadow: 0 8px 20px rgba(181,22,80,0.35);
+
+    transition: 0.3s;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* SITE */
+
+#site {
+    display: none;
+}
+
+/* CABEÇALHO */
+
+header {
+    text-align: center;
+
+    padding: 65px 20px 55px;
+
+    color: white;
+
+    background: linear-gradient(135deg, #781738, #e91e63, #ff6f9c);
+
+    border-radius: 0 0 45px 45px;
+
+    box-shadow: 0 10px 30px rgba(120,20,50,0.25);
+}
+
+.coracao-cabecalho {
+    font-size: 65px;
+    animation: pulsar 1.5s infinite;
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+header p {
+    font-size: 17px;
+}
+
+/* CONTEÚDO */
+
+main {
+    width: 92%;
+    max-width: 700px;
+    margin: auto;
+    padding: 25px 0 50px;
+}
+
+/* CARTÕES */
+
+.card {
+    background: rgba(255,255,255,0.96);
+
+    margin: 25px 0;
+    padding: 32px 25px;
+
+    border-radius: 28px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(120,20,50,0.12);
+
+    border: 1px solid rgba(233,30,99,0.15);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    color: #c2185b;
+    font-size: 25px;
+}
+
+.card p {
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+/* MENSAGEM */
+
+#mensagem {
+    margin-top: 25px;
+
+    color: #c2185b;
+
+    font-size: 19px;
+    font-weight: bold;
+
+    line-height: 1.6;
+
+    opacity: 0;
+    transition: 0.5s;
+}
+
+/* GALERIA */
+
+.galeria {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.foto {
+    width: 160px;
+    height: 160px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 22px;
+
+    background: linear-gradient(135deg, #ffe
