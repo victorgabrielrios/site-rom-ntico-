@@ -1,19 +1,23 @@
-function entrar() {
-
-    document.getElementById("inicio").style.display = "none";
-
-    document.getElementById("site").style.display = "block";
-
-    window.scrollTo(0, 0);
-}
-
-
 function mostrarMensagem() {
-
     const mensagem = document.getElementById("mensagem");
 
-    mensagem.innerHTML =
-        "Maysa, entre tantas pessoas que poderiam cruzar meu caminho, fico feliz que nossos caminhos tenham se encontrado. Você se tornou alguém muito especial para mim. ♥";
+    mensagem.innerHTML = `
+        <p>
+            Maysa, talvez você não saiba, mas existem
+            momentos simples que acabam ficando
+            guardados de um jeito especial.
+        </p>
 
-    mensagem.style.padding = "20px";
+        <p>
+            Esse pequeno cantinho foi feito para
+            guardar um pouco dessas lembranças
+            e mostrar o carinho por trás delas. ♥
+        </p>
+
+        <p>
+            Espero que você goste da surpresa. ✨
+        </p>
+    `;
+
+    mensagem.style.display = "block";
 }
